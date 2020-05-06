@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == 'Any CPU' ">AnyCPU</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C235092-820C-4DEB-9074-D356FB797D8B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Org.BouncyCastle</RootNamespace>
+    <AssemblyName>BouncyCastle</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\lib\net20\</OutputPath>
+    <IntermediateOutputPath>obj\Debug\lib\net20\</IntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE;INCLUDE_IDEA;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\lib\net20\</OutputPath>
+    <IntermediateOutputPath>obj\Release\lib\net20\</IntermediateOutputPath>
+    <DefineConstants>TRACE;INCLUDE_IDEA;</DefineConstants>
+    <DocumentationFile>doc\BouncyCastle.xml</DocumentationFile>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\BouncyCastle.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\AssemblyInfo.cs" />
+    <Compile Include="src\crypto\BufferedAeadBlockCipher.cs" />
+    <Compile Include="src\crypto\BufferedAeadCipher.cs" />
+    <Compile Include="src\crypto\BufferedBlockCipher.cs" />
+    <Compile Include="src\crypto\BufferedCipherBase.cs" />
+    <Compile Include="src\crypto\Check.cs" />
+    <Compile Include="src\crypto\CryptoException.cs" />
+    <Compile Include="src\crypto\DataLengthException.cs" />
+    <Compile Include="src\crypto\IBlockCipher.cs" />
+    <Compile Include="src\crypto\IBufferedCipher.cs" />
+    <Compile Include="src\crypto\ICipher.cs" />
+    <Compile Include="src\crypto\ICipherParameters.cs" />
+    <Compile Include="src\crypto\IDerivationFunction.cs" />
+    <Compile Include="src\crypto\IDerivationParameters.cs" />
+    <Compile Include="src\crypto\IDigest.cs" />
+    <Compile Include="src\crypto\InvalidCipherTextException.cs" />
+    <Compile Include="src\crypto\KeyGenerationParameters.cs" />
+    <Compile Include="src\crypto\OutputLengthException.cs" />
+    <Compile Include="src\crypto\parameters\ParametersWithIV.cs" />
+    <Compile Include="src\crypto\parameters\ParametersWithRandom.cs" />
+    <Compile Include="src\crypto\prng\CryptoApiRandomGenerator.cs" />
+    <Compile Include="src\crypto\prng\DigestRandomGenerator.cs" />
+    <Compile Include="src\crypto\prng\IRandomGenerator.cs" />
+    <Compile Include="src\crypto\engines\AesEngine.cs" />
+    <Compile Include="src\crypto\modes\GCMBlockCipher.cs" />
+    <Compile Include="src\crypto\modes\IAeadBlockCipher.cs" />
+    <Compile Include="src\crypto\modes\IAeadCipher.cs" />
+    <Compile Include="src\crypto\modes\gcm\GcmUtilities.cs" />
+    <Compile Include="src\crypto\modes\gcm\IGcmExponentiator.cs" />
+    <Compile Include="src\crypto\modes\gcm\IGcmMultiplier.cs" />
+    <Compile Include="src\crypto\modes\gcm\Tables1kGcmExponentiator.cs" />
+    <Compile Include="src\crypto\modes\gcm\Tables64kGcmMultiplier.cs" />
+    <Compile Include="src\crypto\modes\gcm\Tables8kGcmMultiplier.cs" />
+    <Compile Include="src\crypto\parameters\AEADParameters.cs" />
+    <Compile Include="src\crypto\parameters\CcmParameters.cs" />
+    <Compile Include="src\crypto\parameters\KeyParameter.cs" />
+    <Compile Include="src\crypto\util\Pack.cs" />
+    <Compile Include="src\math\BigInteger.cs" />
+    <Compile Include="src\security\GeneralSecurityException.cs" />
+    <Compile Include="src\security\InvalidKeyException.cs" />
+    <Compile Include="src\security\InvalidParameterException.cs" />
+    <Compile Include="src\security\KeyException.cs" />
+    <Compile Include="src\security\SecureRandom.cs" />
+    <Compile Include="src\util\Arrays.cs" />
+    <Compile Include="src\util\Platform.cs" />
+    <Compile Include="src\util\Times.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
