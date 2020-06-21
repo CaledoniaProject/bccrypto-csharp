@@ -1,3 +1,7 @@
+# Deprecated
+
+See [https://www.nuget.org/packages/PInvoke.BCrypt/](https://www.nuget.org/packages/PInvoke.BCrypt/) for details.
+
 # Example
 
 ```
